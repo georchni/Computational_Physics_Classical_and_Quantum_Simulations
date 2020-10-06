@@ -66,3 +66,24 @@ vii. Try also a cold start where initial spins are aligned (in this case you eit
 or increase kT)
 
 viii. Extend the model in 2D model.
+
+### 3) Monte Carlo of Evolution
+
+ The algorithm is the following:
+
+i. N species are arranged in 1D line.
+
+ii. Assign a random barrier Bi in the range [0; 1] to each species.
+
+iii. Mutate the species with the lowest barrier by assigning a new barrier Bn for this species and its
+neighbouring species B_{n-1} and B_{n+1}.
+
+iv. Repeat this mutation for each iteration.
+
+v. The real time of the mutation is proportional to exp(B_n=T_car), were T_car is a characteristic time
+scale (T_car = 0.01). 
+
+vi. Produce similar plots to those printed in the article.
+
+The results are compared with the following article, in which certain aspects of evolution are described with the help of a MC model:  P. Bak and K. Sneppen, Punctuated equilibrium and criticality in a simple model of evolution, Phys. Rev.
+Lett. 71 (1993) 4083.
