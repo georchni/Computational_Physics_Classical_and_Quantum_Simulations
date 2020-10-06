@@ -7,7 +7,7 @@ The following algorithms can be found here:
 
 The Metropolis algorithm performs a special kind of Monte Carlo integration. It works as follows:
 
-a) We choose values for the xi first. Either choose a cold start (set all the x_i to zero) or a warm start
+a) We choose values for the x_i first. Either choose a cold start (set all the x_i to zero) or a warm start
 (choose random values for all the x_i).
 
 (b) The next step is to thermalize the configuration. The point of this step is to get rid of unphysical
@@ -23,14 +23,14 @@ Ncor.
 5. If the action is not decreased, keep the new configuration with probability exp(􀀀(Snew 􀀀 Sold)),
 otherwise restore the old configuration.
 
-(d) Now we calculate a sample of Ncf configurations. There are two equivalent ways to do this:
+(d) Calculate a sample of N_cf configurations. There are two equivalent ways to do this:
 
-- Perform steps (a) - (c) and take the last configuration for your sample, repeat this Ncf times.
+- Perform steps (a) - (c) and take the last configuration for your sample, repeat this N_cf times.
 
-- Perform steps (a) - (c) only once and take Ncf configurations after the thermalization.
+- Perform steps (a) - (c) only once and take N_cf configurations after the thermalization.
 
  The second method is obviously much faster. However, care has to be taken in order to obtain
-uncorrelated configurations. This can be done by performing Ncor update steps in between each
+uncorrelated configurations. This can be done by performing N_cor update steps in between each
 obtained configuration.
 
 (e) We are interested in the transition matrix element, which translates to the calculation of the Green’s
