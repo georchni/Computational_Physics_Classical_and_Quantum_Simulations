@@ -16,7 +16,7 @@ described in item (c) for 5 to 10 times the number of data samples that we assum
 Ncor.
 
 iii. Update the configuration:
-1. Choose an uniform random number r in [-epsilon,epsilon].
+1. Choose a uniform random number r in [-epsilon,epsilon].
 2. Change a random x_i by r.
 3. Calculate the difference in action between the old and the new configuration.
 4. If the action is decreased, keep the new configuration.
